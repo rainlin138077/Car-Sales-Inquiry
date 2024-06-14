@@ -83,7 +83,6 @@ public class openwindow {
         
         text = new JTextField();
         text.setFont(new Font("新細明體", Font.PLAIN, 16));
-        text.setText("列表名稱");
         text.setBounds(238, 127, 76, 34);
         frame.getContentPane().add(text);
         text.setColumns(16);
@@ -140,7 +139,6 @@ public class openwindow {
         
         Name = new JTextField();
         Name.setFont(new Font("新細明體", Font.PLAIN, 16));
-        Name.setText("名稱");
         Name.setColumns(16);
         Name.setBounds(152, 127, 76, 34);
         frame.getContentPane().add(Name);
