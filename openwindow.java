@@ -87,7 +87,8 @@ public class openwindow {
         text.setBounds(238, 127, 76, 34);
         frame.getContentPane().add(text);
         text.setColumns(16);
-        
+
+	//這裡是下拉選單，選完後系統會自動顯示出所選列表的所有資料
         JComboBox comboBox = new JComboBox<>(new String[]{"Brand ", "Model ", "Supplier ", "Plant ", "Dealer ", "Customer ", "Vehicle ", "Supply ", "Manufacture ", "Inventory "});
         comboBox.addActionListener(e -> runQuery("SELECT * FROM "+comboBox.getSelectedItem().toString()));
         comboBox.setBounds(324, 127, 97, 35);
@@ -147,7 +148,7 @@ public class openwindow {
         JFrame jFrame = new JFrame();
         JDialog jd = new JDialog(jFrame);
         jd.setBounds(500, 300, 400, 300);
-        JLabel jLabel = new JLabel(
+        JLabel jLabel = new JLabel(//這裡是規則說明，在內文有問號按鈕點下去會介紹
         		"<html><body><p	align=\"center\">以下是查詢規則介紹：<br/>搜尋資料旁的列表選項可以提供特定列表，如果你在特定列表有特殊需求，即在輸入選項內輸入即可</p></body></html>"
         		,SwingConstants.CENTER);
         jLabel.setFont(new Font("標楷體", Font.PLAIN, 20));
@@ -164,15 +165,15 @@ public class openwindow {
 			public void actionPerformed(ActionEvent e) {
 				//跳到search
 				System.out.print(text.getText());
-				if(text.getText() != null && Name.getText() != null) {
+				if(text.getText() != null && Name.getText() != null) {//兩個都有的時候是搜尋特定table的特定列表的特定名稱
 					String findword = "SELECT ALL."+text.getText()+" FROM "+comboBox.getSelectedItem().toString()+" ALL "+Name.getText()+" "; // 根據 ModelName 字段搜尋
 	                runQuery(findword);
 				}
-				else if (text.getText() != null && Name.getText() == null) {
+				else if (text.getText() != null && Name.getText() == null) {//顯示特定table的特定列表
 	                String findword = "SELECT "+text.getText()+" FROM "+comboBox.getSelectedItem().toString()+" "; // 根據 ModelName 字段搜尋
 	                runQuery(findword);
 				}
-				else if(text.getText() == null && Name.getText() != null) {
+				else if(text.getText() == null && Name.getText() != null) {//顯示特定table的特定名稱
 					String ALLget="";
 					switch(comboBox.getSelectedItem().toString()) {
 					case "Brand":
