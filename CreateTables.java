@@ -6,7 +6,7 @@ import java.sql.Statement;
 
 
 public class CreateTables {
-    private static final String URL = "jdbc:mariadb://0.tcp.jp.ngrok.io:11051/411177020";
+    private static final String URL = "jdbc:mariadb://0.tcp.jp.ngrok.io:12592/411177020";
     private static final String USER = "411177020";
     private static final String PASSWORD = "411177020";
     private static Connection connection;
