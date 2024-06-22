@@ -76,8 +76,7 @@ JOIN Vehicle v ON i.VIN = v.VIN
 JOIN Model m ON v.ModelID = m.ModelID
 WHERE m.BodyStyle = 'SUV'
 GROUP BY MONTH(s.SalesDate)
-ORDER BY SalesCount DESC
-LIMIT 1
+ORDER BY SalesCount DESC LIMIT 1
 ```
 ![image](https://github.com/rainlin138077/Car-Sales-Inquiry/assets/152964060/81a94ff4-ddad-4517-a99f-3ce695df9162)
 
