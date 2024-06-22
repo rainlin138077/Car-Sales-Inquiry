@@ -1,4 +1,3 @@
-![image](https://github.com/rainlin138077/Car-Sales-Inquiry/assets/152964060/58c0484a-37c4-401d-a9e2-5209f9fe0f97)# Car-Sales-Inquiry
 學校的期末作業，內容無法上傳，無法修改，僅供測試  
 ConnectionDB為連線系統。  
 CreateTable為上傳並建立資料表格，還有生成一些自己生成的隨機添加資料。  
