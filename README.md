@@ -89,7 +89,6 @@ JOIN Inventory i ON d.DealerID = i.DealerID
 JOIN Vehicle v ON i.VIN = v.VIN
 WHERE i.InventoryStatus = 'Available'
 GROUP BY d.DealerID
-ORDER BY AvgDaysInInventory DESC
-LIMIT 1
+ORDER BY AvgDaysInInventory DESC LIMIT 1
 ```
 ![image](https://github.com/rainlin138077/Car-Sales-Inquiry/assets/152964060/1fee9de2-e7c7-465c-b423-b94bcfb890ae)
